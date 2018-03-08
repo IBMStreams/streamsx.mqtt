@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.ibm.com/xmlns/prod/streams/adapters"
+        xmlns:st="http://www.ibm.com/xmlns/prod/streams/adapters"
+        attributeFormDefault="unqualified"
+        elementFormDefault="unqualified">
+
+  <element name="connections">
+    <complexType>
+      <sequence>
+        <element name="connection_specifications" minOccurs="0" maxOccurs="1">
+          <complexType>
+            <sequence>
+              <element name="connection_specification" minOccurs="0" maxOccurs="unbounded">
+                <complexType>
+                  <choice minOccurs="1" maxOccurs="1">
+                    <element name="MQTT">
+                      <complexType>
+                        <attribute name="serverURI" use="required" type="anyURI"/>
+			   <attribute name="trustStore" type="anyURI"/>
+			   <attribute name="keyStore" type="anyURI"/>
+			   <attribute name="keyStorePassword" type="string"/>
+			   <attribute name="trustStorePassword" type="string"/>
+			   <attribute name="userID" type="string"/>
+			   <attribute name="password" type="string"/>
+			   <attribute name="keepAliveInterval">
+			      <simpleType>
+                     <restriction base="integer">
+          			    <minInclusive value="0"/>
+     				 </restriction>
+                  </simpleType>
+			   </attribute>
+			   <attribute name="commandTimeout">
+			      <simpleType>
+                     <restriction base="long">
+          			    <minInclusive value="0"/>
+     				 </restriction>
+                  </simpleType>
+			   </attribute>
+                      </complexType>
+                    </element>
+                  </choice>
+                  <attribute name="name" use="required" type="NCName"/>
+                </complexType>
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+
+
+</schema>
