@@ -5,9 +5,10 @@
   <info:identity>
     <info:name>com.ibm.streamsx.mqtt</info:name>
     <info:description>
-The MQTT toolkit is an open source IBM Streams toolkit that helps you use IBM Streams to interact with MQTT providers.
+The MQTT toolkit is an open source IBM Streams toolkit that helps you integrate IBM Streams with MQTT providers.
 
-The operators provide the ability for IBM Streams applications to send and receive data from a topic that is posted on an MQ Telemetry Transport (MQTT) server.
+The operators provide the ability for IBM Streams applications to publish messages to MQTT topics and receive 
+message from subscribed MQTT topics that are posted on an MQ Telemetry Transport (MQTT) server.
 
 The `MQTTSource` and `MQTTSink` operators use the MQTT architecture and APIs to read and write to MQTT providers.  The operators support 
 IBM MessageSight v1.1 and v1.2.
@@ -23,8 +24,8 @@ or the SPL compiler to be aware of the location of the toolkit.
 
 # Before you begin
 
-* Install IBM InfoSphere Streams.  Configure the product environment variables by entering the following command: 
-      source product-installation-root-directory/4.2.0.0/bin/streamsprofile.sh
+* Install IBM Streams. Configure the product environment variables by entering the following command: 
+      &lt;source product-installation-root-directory>/&lt;your version>/bin/streamsprofile.sh
 
 
 # About this task
@@ -44,7 +45,7 @@ Alternatively, you can fully qualify the operators that are provided by toolkit 
         sc -t $STREAMS_INSTALL/toolkits/com.ibm.streamsx.mqtt -M MyMain
     where MyMain is the name of the SPL main composite.
     **Note**: These command parameters override the **STREAMS_SPLPATH** environment variable.
-  * Add the toolkit location in InfoSphere Streams Studio.
+  * Add the toolkit location in Streams Studio.
 3. Develop your application. To avoid the need to fully qualify the operators, add a use directive in your application. 
   * For example, you can add the following clause in your SPL source file:
         use com.ibm.streamsx.mqtt::*;
@@ -140,3 +141,4 @@ The &lt;MQTT> element has the following attributes:
   </info:identity>
   <info:dependencies/>
 </info:toolkitInfoModel>
+
