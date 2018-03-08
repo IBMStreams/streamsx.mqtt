@@ -16,7 +16,7 @@ sidebar:
 The streamsx.mqtt toolkit provides those operators that help you integrate IBM Streams with MQTT providers
 like MessageSight or the MQTT services in the IBM Cloud.
 
-This toolkit lets you read messages MQTT topics and write messages into topics.
+This toolkit lets you read messages from subscribed MQTT topics and publish messages to topics.
 
 
 ## Introduction into this toolkit
