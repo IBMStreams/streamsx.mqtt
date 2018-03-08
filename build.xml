@@ -61,7 +61,8 @@
 		<ant dir="${toolkit}" target="toolkit" />
 	</target>
 
-	<target name="spldoc" depends="spldoc_work, revertversion" />
+<!--	<target name="spldoc" depends="spldoc_work, revertversion" /> -->
+	<target name="spldoc" depends="spldoc_work"/>
 
 	<target name="spldoc_work" depends="setcommitversion, samples">
 		<antcall target="spldoctoolkit">
