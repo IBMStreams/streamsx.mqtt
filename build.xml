@@ -130,7 +130,7 @@
              destfile="${releasefilename}"
     	     basedir="${basedir}"
              includes="${tkinfo.info:identity.info:name}/** samples/** samples/**/.settings/**"
-             excludes="**/.gitignore **/.project **/.classpath ${tkinfo.info:identity.info:name}/.settings/**"
+             excludes="**/.gitignore **/.project **/.classpath ${tkinfo.info:identity.info:name}/impl/java/** ${tkinfo.info:identity.info:name}/.settings/**"
     	/>		
 		<checksum file="${releasefilename}" />
 		<checksum algorithm="sha1" file="${releasefilename}" />
