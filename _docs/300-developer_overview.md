@@ -17,7 +17,7 @@ For more information about the Gitflow process, go to this link here:
 [Gitflow for Github](https://datasift.github.io/gitflow/GitFlowForGitHub.html)
 
 
-#### Very brief description
+### Very brief description
 
 The continuous development is done in the `develop` branch.
 
