@@ -1,39 +1,39 @@
-# MQTT Toolkit
-
-Welcome to the MQTT Toolkit. This toolkit enables SPL applications to integrate with MQTT servers.
-
-## Why should you prefer this toolkit over the com.ibm.streamsx.messaging toolkit?
-
-* This toolkit contains only the integration with MQTT and is very small compared with the messaging toolkit
-* The MQTT function in the messaging toolkit is deprecated and will not be enhanced any more
-
-## Migration from com.ibm.streamsx.messaging.mqtt
-
-To migrate applications from the old MQTT operators in the `com.ibm.streamsx.messaging` toolkit, it is only required 
-to make the SPL compiler aware of this toolkit and to change the SPL namespace of the used MQTT artifacts 
-(operators, functions, and the like) in your SPL application. This toolkit includes everything in SPL namespace `com.ibm.streamsx.mqtt`,
-while the MQTT function of the older `com.ibm.streamsx.messaging` toolkit uses the `com.ibm.streamsx.messaging.mqtt` namespace.
-
-Operator names, function names, and the like are the same as in the messaging toolkit. The first release has no changes in the 
-functionality compared with the [messaging toolkit version 5.3.4](https://github.com/IBMStreams/streamsx.messaging/releases/tag/v5.3.4).
-
-## Releases
-
-The MQTT Toolkit is offically released to support InfoSphere Streams v4.2:
-* https://github.com/IBMStreams/streamsx.mqtt/releases
-
-## Check out our SPLDOC here: 
-* http://ibmstreams.github.io/streamsx.mqtt/com.ibm.streamsx.mqtt/doc/spldoc/html/index.html
-
-## To get started with working with this toolkit
-
-* https://github.com/IBMStreams/streamsx.mqtt/wiki/Getting-Started-with-Toolkit-Development
-* [The messages and the NLS for toolkits](https://github.com/IBMStreams/administration/wiki/Messages-and-National-Language-Support-for-toolkits)
+# toolkit-theme-2
 
 
-## To learn more about Streams
 
-* [IBM Streams on Github](http://ibmstreams.github.io)
-* [Introduction to Streams Quick Start Edition](http://ibmstreams.github.io/streamsx.documentation/docs/4.1/qse-intro/)
-* [Streams Getting Started Guide](http://ibmstreams.github.io/streamsx.documentation/docs/4.1/qse-getting-started/)
-* [StreamsDev](https://developer.ibm.com/streamsdev/)
+This project just stared and is incubating.
+
+It is build on and inspired by the [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) great Jekyll theme and shall provided a unique layout for all Streams toolkit documentation.
+Idea is that each toolkit uses this theme on it's gh-pages branch and just adds it's documentation as markdown documents. 
+At the end each toolkit will have one place collecting all information on just this one site. Actually there are many places where one can find toolkit specific information. But also if there is information regarding toolkit usage available there is nearly no information regarding development and testing of a toolkit.
+This theme shall enable and encourage everyone who is involved in developing and testing toolkits to document as much as possible.
+
+New pages can be created just within the github web by writing markdown files. Navigation topics are just added with two lines in the navigation.yml file.
+
+Lookt here to see it in action [toolkit-theme-2](https://rnostream.github.io/toolkit-theme-2/). This site runs just from this master branch as github-page.
+Pull this master to your gh-pages branch and change/add your files in /_docs and your navigation in /_data/navigation.yml.
+
+## How to add content
+
+All content is written Markdown Language and is located in the `_docs` directory. Insert the following header into each single MD file that you create:
+
+```yml
+---
+title: "Toolkit Development overview"
+permalink: /docs/developer/overview/               # make sure this is the same as 'url' in _data/navigation.yml
+excerpt: "Contributing to this toolkits development."
+last_modified_at: 2017-08-04T12:37:48-04:00
+redirect_from:
+   - /theme-setup/
+sidebar:
+   nav: "developerdocs"                            #chose one of 'knowledgedocs', 'userdocs' or 'developerdocs' from navigation.yml
+---
+{% include toc %}
+{% include editme %}
+```
+
+Make sure that the `permalink` is unique within the MD documents and terminates with a `/` character. 
+Add the page with the permalink to the `_data/navigation.yml` file to specify where the content shall be visible in the menu.
+The actual filename of the MD files in the `_docs`directory is only important for the `prev` and `next` navigation. 
+The alphabetic names of the MD files determine the sequence of the previous-next navigation.
