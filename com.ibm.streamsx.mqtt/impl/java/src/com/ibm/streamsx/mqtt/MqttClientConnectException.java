@@ -7,12 +7,12 @@ package com.ibm.streamsx.mqtt;
 
 public class MqttClientConnectException extends RuntimeException {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	public MqttClientConnectException(String string) {
-		super(string);
-	}
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
+    public MqttClientConnectException(String string) {
+        super(string);
+    }
 }
