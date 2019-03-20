@@ -1,10 +1,9 @@
 output
 impl/lib
-opt/downloaded
+opt/
 /target
 /.externalToolBuilders
 /bin/
 /doc/*
 toolkit.xml
-
-
+.toolkitList
