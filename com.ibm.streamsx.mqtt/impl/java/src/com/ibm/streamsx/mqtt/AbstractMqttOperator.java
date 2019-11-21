@@ -321,6 +321,7 @@ public abstract class AbstractMqttOperator extends AbstractOperator {
         String keyStore = getKeyStore();
         String keyStorePw = getKeyStorePassword();
 
+        System.setProperty("com.ibm.jsse2.overrideDefaultTLS", "true");
         if (trustStore != null || keyStore != null) {
             Properties sslProperties = new Properties();
 
