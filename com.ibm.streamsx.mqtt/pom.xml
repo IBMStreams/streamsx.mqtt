@@ -6,7 +6,7 @@
     <groupId>com.ibm.streamsx.mqtt</groupId>
     <artifactId>streamsx.mqtt</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
     <name>com.ibm.streamsx.mqtt</name>
     <repositories>
         <repository>
